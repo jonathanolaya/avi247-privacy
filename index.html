@@ -1,144 +1,419 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>AVI 24/7 - Términos y Política de Privacidad</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Términos y Condiciones — AVI 24/7</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-<style>
-body{
-font-family: Arial, sans-serif;
-margin:40px;
-line-height:1.6;
-max-width:900px;
-}
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #060D1A;
+      color: #F9FAFB;
+      line-height: 1.7;
+    }
 
-h1{
-color:#1e3a8a;
-}
+    header {
+      background: #111827;
+      border-bottom: 1px solid #374151;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
 
-h2{
-margin-top:30px;
-color:#111827;
-}
+    .logo-circle {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, #2563EB, #1D4ED8);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 14px;
+      color: white;
+      letter-spacing: 0.5px;
+    }
 
-p{
-margin-bottom:10px;
-}
+    .header-text h1 {
+      font-size: 18px;
+      font-weight: 800;
+      color: #F9FAFB;
+    }
 
-.alert{
-background:#fff3cd;
-padding:10px;
-border-left:4px solid orange;
-margin:15px 0;
-}
-</style>
+    .header-text p {
+      font-size: 12px;
+      color: #9CA3AF;
+    }
+
+    nav {
+      background: #111827;
+      border-bottom: 1px solid #374151;
+      padding: 0 24px;
+      display: flex;
+      gap: 4px;
+    }
+
+    nav a {
+      display: inline-block;
+      padding: 12px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #9CA3AF;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+    }
+
+    nav a:hover { color: #3B82F6; }
+    nav a.active {
+      color: #3B82F6;
+      border-bottom-color: #3B82F6;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(37, 99, 235, 0.15);
+      border: 1px solid rgba(37, 99, 235, 0.35);
+      color: #3B82F6;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+
+    .page-title {
+      font-size: 28px;
+      font-weight: 900;
+      color: #F9FAFB;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+
+    .page-subtitle {
+      font-size: 14px;
+      color: #9CA3AF;
+      margin-bottom: 40px;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #374151;
+      margin: 32px 0;
+    }
+
+    .section-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #F9FAFB;
+      margin-bottom: 10px;
+      margin-top: 32px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      background: #2563EB;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    p {
+      font-size: 14px;
+      color: #9CA3AF;
+      margin-bottom: 10px;
+    }
+
+    .indent {
+      padding-left: 16px;
+      border-left: 2px solid #374151;
+      margin: 8px 0 8px 4px;
+    }
+
+    .indent p {
+      margin-bottom: 6px;
+    }
+
+    .warning-box {
+      background: rgba(245, 158, 11, 0.08);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin: 20px 0;
+    }
+
+    .warning-box p {
+      color: #F59E0B;
+      font-size: 13px;
+      margin: 0;
+    }
+
+    .warning-box strong {
+      color: #FBBF24;
+    }
+
+    .info-box {
+      background: rgba(37, 99, 235, 0.07);
+      border: 1px solid rgba(37, 99, 235, 0.25);
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin: 20px 0;
+    }
+
+    .info-box p {
+      color: #93C5FD;
+      font-size: 13px;
+      margin: 0;
+    }
+
+    footer {
+      background: #111827;
+      border-top: 1px solid #374151;
+      padding: 24px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 12px;
+      color: #6B7280;
+      margin: 0;
+    }
+
+    footer a {
+      color: #3B82F6;
+      text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .page-title { font-size: 22px; }
+      .container { padding: 28px 16px 60px; }
+    }
+  </style>
 </head>
-
 <body>
 
-<h1>AVI 24/7</h1>
-<h2>Términos y Condiciones de Uso</h2>
+  <!-- HEADER -->
+  <header>
+    <div class="logo-circle">AVI</div>
+    <div class="header-text">
+      <h1>AVI 24/7</h1>
+      <p>Asistencia Vial Inmediata</p>
+    </div>
+  </header>
 
-<p>Versión 1.0 — Última actualización: 2026</p>
+  <!-- NAV -->
+  <nav>
+    <a href="terminos.html" class="active">Términos y Condiciones</a>
+    <a href="privacidad.html">Política de Privacidad</a>
+  </nav>
 
-<h2>1. Identificación del prestador</h2>
+  <!-- CONTENIDO -->
+  <div class="container">
 
-<p>
-AVI 24/7 es una aplicación móvil de gestión y asistencia vehicular operada en la República de Colombia.
-La plataforma actúa como intermediario tecnológico entre el usuario y proveedores de servicios vehiculares.
-</p>
+    <div class="badge">DOCUMENTO LEGAL</div>
+    <h1 class="page-title">Términos y Condiciones de Uso</h1>
+    <p class="page-subtitle">
+      AVI 24/7 — Asistencia Vial Inmediata &nbsp;·&nbsp;
+      Versión 1.0 &nbsp;·&nbsp;
+      Última actualización: 2025
+    </p>
 
-<h2>2. Aceptación de los términos</h2>
+    <hr class="divider" />
 
-<p>
-Al descargar, instalar o utilizar la aplicación AVI 24/7 el usuario acepta los presentes términos
-y condiciones así como la política de privacidad.
-</p>
+    <!-- 1 -->
+    <div class="section-title">1. Identificación del Prestador</div>
+    <p>
+      AVI 24/7 es una aplicación móvil de gestión y asistencia vehicular operada en
+      la República de Colombia por una persona natural (en adelante <strong>"AVI 24/7"</strong>
+      o <strong>"el Prestador"</strong>). El Prestador actúa en calidad de intermediario
+      tecnológico entre el usuario y los proveedores de servicios vehiculares.
+    </p>
+    <div class="info-box">
+      <p>📞 Contacto: <strong>+57 311 487 1481</strong> vía WhatsApp</p>
+    </div>
 
-<h2>3. Descripción del servicio</h2>
+    <!-- 2 -->
+    <div class="section-title">2. Aceptación de los Términos</div>
+    <p>
+      Al descargar, instalar, registrarse o usar la aplicación AVI 24/7, el usuario
+      declara que ha leído, comprendido y acepta de forma libre, voluntaria e
+      inequívoca los presentes Términos y Condiciones, así como la
+      <a href="privacidad.html" style="color:#3B82F6;">Política de Privacidad</a>.
+      Si no está de acuerdo con alguna disposición, deberá desinstalar la aplicación
+      y abstenerse de utilizarla.
+    </p>
 
-<p>La aplicación ofrece:</p>
+    <!-- 3 -->
+    <div class="section-title">3. Descripción del Servicio</div>
+    <p>AVI 24/7 es una plataforma tecnológica de gestión y asistencia vehicular que
+    ofrece las siguientes funcionalidades:</p>
+    <div class="indent">
+      <p><strong>a)</strong> Registro y seguimiento de hasta tres (3) vehículos por cuenta de usuario.</p>
+      <p><strong>b)</strong> Recordatorios y alertas de vencimiento de SOAT y Revisión
+      Técnico-Mecánica (Tecnomecánica).</p>
+      <p><strong>c)</strong> Consulta informativa de restricciones de Pico y Placa para
+      ciudades colombianas.</p>
+      <p><strong>d)</strong> Botón SOS de asistencia vial en carretera (servicio de grúa
+      y mecánico a domicilio) mediante envío de ubicación GPS al número de asistencia
+      configurado.</p>
+      <p><strong>e)</strong> Gestión de trámites vehiculares a través de WhatsApp
+      (comparendos, impuesto vehicular, licencia de conducción, traspaso).</p>
+      <p><strong>f)</strong> Intermediación en la venta y renovación de seguros vehiculares
+      (SOAT y seguros complementarios) a través del canal WhatsApp del Prestador.</p>
+      <p><strong>g)</strong> Gestión y orientación para la Revisión Técnico-Mecánica (RTM):
+      asesoría sobre requisitos, centros de diagnóstico automotor (CDA) disponibles y
+      acompañamiento en el proceso de obtención del certificado.</p>
+    </div>
 
-<ul>
-<li>Registro de vehículos</li>
-<li>Recordatorios de SOAT</li>
-<li>Recordatorios de Tecnomecánica</li>
-<li>Consulta informativa de Pico y Placa</li>
-<li>Botón SOS de asistencia vial</li>
-<li>Gestión de trámites mediante WhatsApp</li>
-</ul>
+    <div class="warning-box">
+      <p>
+        <strong>⚠️ ACLARACIÓN — INTERMEDIACIÓN:</strong> AVI 24/7 actúa como intermediario
+        tecnológico y canal de contacto. La venta de seguros se realiza a través de
+        aseguradoras o intermediarios autorizados por la Superintendencia Financiera de
+        Colombia. La gestión de RTM se coordina con CDAs habilitados por el Ministerio
+        de Transporte. AVI 24/7 no es aseguradora ni CDA y no asume responsabilidad
+        directa por los servicios prestados por dichos terceros.
+      </p>
+    </div>
 
-<div class="alert">
-AVI 24/7 actúa únicamente como intermediario tecnológico.
-Los servicios son prestados por terceros.
-</div>
+    <!-- 4 -->
+    <div class="section-title">4. Registro y Cuenta de Usuario</div>
+    <p>
+      Para acceder a las funciones de AVI 24/7 el usuario debe registrarse con nombre
+      completo, número de documento de identidad, correo electrónico y contraseña.
+      El usuario es el único responsable de mantener la confidencialidad de sus
+      credenciales de acceso y de todas las actividades que ocurran bajo su cuenta.
+      AVI 24/7 no será responsable por pérdidas derivadas del uso no autorizado de
+      la cuenta por parte de terceros.
+    </p>
 
-<h2>4. Cuenta de usuario</h2>
+    <!-- 5 -->
+    <div class="section-title">5. Licencia de Uso y Tarifas</div>
+    <p>
+      El acceso completo a las funcionalidades de AVI 24/7 requiere la activación
+      mediante un código de licencia único e intransferible proporcionado por el
+      Prestador previo pago del valor acordado. La licencia es de carácter personal,
+      no transferible y <strong>no reembolsable</strong> una vez activada. El Prestador
+      se reserva el derecho de revocar la licencia sin reembolso en caso de
+      incumplimiento de estos términos o uso fraudulento de la aplicación.
+    </p>
+    <p>
+      Las tarifas de los servicios de intermediación (seguros, RTM, asistencia vial)
+      son informadas al usuario directamente a través del canal WhatsApp antes de
+      cualquier compromiso de pago.
+    </p>
 
-<p>
-El usuario es responsable de la seguridad de sus credenciales y de la información registrada en la aplicación.
-</p>
+    <!-- 6 -->
+    <div class="section-title">6. Limitación de Responsabilidad</div>
+    <div class="warning-box">
+      <p>
+        <strong>⚠️ IMPORTANTE:</strong> AVI 24/7 es una herramienta de apoyo informativo.
+        Los recordatorios de vencimiento de SOAT y Tecnomecánica son orientativos y pueden
+        no reflejar cambios de última hora. La información de Pico y Placa es referencial y
+        puede variar por decreto municipal sin previo aviso.
+        <br /><br />
+        <strong>ES RESPONSABILIDAD EXCLUSIVA DEL USUARIO</strong> verificar la vigencia
+        de sus documentos ante las entidades competentes (RUNT, aseguradoras,
+        Secretarías de Tránsito). AVI 24/7 NO asume responsabilidad por multas,
+        sanciones, infracciones, accidentes, daños o perjuicios derivados del uso
+        o mal uso de la información suministrada por la aplicación.
+      </p>
+    </div>
 
-<h2>5. Limitación de responsabilidad</h2>
+    <!-- 7 -->
+    <div class="section-title">7. Función SOS y Ubicación GPS</div>
+    <p>
+      La función SOS solicita acceso a la ubicación GPS del dispositivo únicamente
+      en el momento en que el usuario la activa de forma voluntaria. La ubicación
+      obtenida se transmite en tiempo real al número de asistencia configurado
+      (+57 311 487 1481) a través de WhatsApp con el único propósito de brindar
+      asistencia vial. AVI 24/7 no almacena, registra ni comercializa el historial
+      de ubicaciones del usuario.
+    </p>
+    <p>
+      La disponibilidad del servicio de grúa o mecánico depende de terceros
+      prestadores y AVI 24/7 no garantiza tiempos de respuesta ni disponibilidad
+      permanente del servicio.
+    </p>
 
-<p>
-AVI 24/7 proporciona información orientativa. El usuario es responsable de verificar la vigencia
-de sus documentos ante las entidades correspondientes.
-</p>
+    <!-- 8 -->
+    <div class="section-title">8. Contenido y Conducta del Usuario</div>
+    <p>
+      El usuario se compromete a proporcionar información veraz, completa y
+      actualizada al momento del registro y durante el uso de la aplicación.
+      Queda prohibido el uso de AVI 24/7 para actividades ilícitas, fraudulentas
+      o que vulneren derechos de terceros. AVI 24/7 se reserva el derecho de
+      suspender o eliminar cuentas que incumplan esta disposición sin previo aviso
+      y sin reembolso de licencia.
+    </p>
 
-<h1>Política de Privacidad</h1>
+    <!-- 9 -->
+    <div class="section-title">9. Propiedad Intelectual</div>
+    <p>
+      Todos los derechos de propiedad intelectual sobre la aplicación AVI 24/7,
+      incluyendo su código fuente, diseño, logotipos, nombre comercial y contenidos,
+      son propiedad exclusiva del Prestador y están protegidos por las leyes
+      colombianas de propiedad intelectual. Queda prohibida la reproducción,
+      distribución, modificación o uso comercial no autorizado de cualquier
+      elemento de la aplicación.
+    </p>
 
-<h2>1. Responsable del tratamiento</h2>
+    <!-- 10 -->
+    <div class="section-title">10. Modificaciones al Servicio y a los Términos</div>
+    <p>
+      AVI 24/7 se reserva el derecho de modificar, suspender o discontinuar el
+      servicio en cualquier momento, con o sin previo aviso. Igualmente, podrá
+      actualizar estos Términos y Condiciones. Los cambios entrarán en vigor desde
+      su publicación en la aplicación. El uso continuado de la aplicación después
+      de dicha publicación constituye la aceptación de los términos modificados.
+    </p>
 
-<p>
-AVI 24/7 es responsable del tratamiento de los datos personales recopilados a través de la aplicación,
-en cumplimiento de la Ley 1581 de 2012 de Colombia.
-</p>
+    <!-- 11 -->
+    <div class="section-title">11. Ley Aplicable y Jurisdicción</div>
+    <p>
+      Los presentes Términos y Condiciones se rigen por las leyes de la República
+      de Colombia, en particular por la
+      <strong>Ley 1480 de 2011</strong> (Estatuto del Consumidor),
+      la <strong>Ley 1581 de 2012</strong> (Protección de Datos Personales) y el
+      <strong>Decreto 1377 de 2013</strong>. Para la resolución de cualquier
+      controversia derivada del uso de AVI 24/7, las partes se someten a la
+      jurisdicción de los tribunales competentes de la República de Colombia.
+    </p>
 
-<h2>2. Datos recopilados</h2>
+    <hr class="divider" />
 
-<ul>
-<li>Nombre</li>
-<li>Correo electrónico</li>
-<li>Teléfono</li>
-<li>Datos del vehículo</li>
-<li>Ubicación GPS cuando se usa la función SOS</li>
-</ul>
+    <p style="font-size:13px; color:#6B7280; text-align:center;">
+      ¿Tienes preguntas sobre estos términos?
+      <a href="https://wa.me/573114871481" style="color:#3B82F6;">Contáctanos por WhatsApp</a>
+    </p>
 
-<h2>3. Uso de la información</h2>
+  </div>
 
-<p>Los datos se utilizan para:</p>
-
-<ul>
-<li>gestión de la cuenta</li>
-<li>recordatorios de documentos</li>
-<li>coordinación de asistencia vial</li>
-</ul>
-
-<h2>4. Compartición de datos</h2>
-
-<p>
-Los datos pueden compartirse únicamente para coordinar servicios solicitados por el usuario
-o cuando sea requerido por autoridades competentes.
-</p>
-
-<h2>5. Eliminación de datos</h2>
-
-<p>
-El usuario puede solicitar la eliminación de su cuenta y sus datos personales en cualquier momento.
-</p>
-
-<h2>6. Seguridad</h2>
-
-<p>
-AVI 24/7 implementa medidas técnicas para proteger la información del usuario.
-</p>
-
-<h2>7. Cambios en la política</h2>
-
-<p>
-AVI 24/7 puede actualizar esta política en cualquier momento. Los cambios serán informados en la aplicación.
-</p>
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      © 2025 AVI 24/7 — Asistencia Vial Inmediata &nbsp;·&nbsp;
+      <a href="terminos.html">Términos y Condiciones</a> &nbsp;·&nbsp;
+      <a href="privacidad.html">Política de Privacidad</a>
+    </p>
+  </footer>
 
 </body>
 </html>
